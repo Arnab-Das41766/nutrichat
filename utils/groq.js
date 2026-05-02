@@ -1,6 +1,7 @@
 // ─── Groq API Client ──────────────────────────────────────────────────────────
-// Replace with your actual Groq API key
-const GROQ_API_KEY = process.env.EXPO_PUBLIC_GROQ_API_KEY;
+import Constants from 'expo-constants';
+
+const GROQ_API_KEY = Constants.expoConfig?.extra?.groqApiKey || process.env.EXPO_PUBLIC_GROQ_API_KEY || '';
 const GROQ_MODEL = 'llama3-70b-8192';
 const GROQ_URL = 'https://api.groq.com/openai/v1/chat/completions';
 
